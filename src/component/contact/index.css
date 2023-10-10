@@ -1,0 +1,42 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-blok{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
+.contact-blok-item{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+.contact-blok-sub{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.contact-sub-value{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.contact-sub-value:not(:last-child)::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 4px;
+    border-radius: 4px;
+    background-color: #000;
+}
+.contact-photo {
+    width: 80px;
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 50px;
+}

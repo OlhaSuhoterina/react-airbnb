@@ -1,0 +1,20 @@
+.attractions-blok{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.attractions-list {
+    display: grid;
+    gap: 24px;
+}
+
+.attractions-item{
+    font-size: 16px;
+    color: #000;
+}
+
+a {
+    color: #000;
+}
+

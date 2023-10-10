@@ -12,6 +12,18 @@ import RoomList from "./component/room-list";
 
 import Description from "./component/description";
 
+import Details from "./component/details";
+
+import Amenities from "./component/amenities";
+
+import Contact from "./component/contact";
+
+import Properties from "./component/properties";
+
+import Reviews from "./component/reviews";
+
+import Attractions from "./component/attractions";
+
 function App() {
   const data = {
     listing_name: "Іст-Сайд Біл",
@@ -181,7 +193,49 @@ function App() {
       />
       <RoomList list={data.roomTypes} />
       <Description title="Опис" children={data.description} />
+
+      <Details
+        guests={data.property_details.guests}
+        bedrooms={data.property_details.bedrooms}
+        beds={data.property_details.beds}
+        baths={data.property_details.baths}
+      />
+
       <Description title="Про сусідів" children={data.neighborhood_info} />
+
+      <Amenities
+        hasPool={data.amenities.hasPool}
+        hasGym={data.amenities.hasGym}
+        hasFreeBreakfast={data.amenities.hasFreeBreakfast}
+        hasFreeWiFi={data.amenities.hasFreeWiFi}
+        hasParking={data.amenities.hasParking}
+        hasPetsAllowed={data.amenities.hasPetsAllowed}
+        hasAirportShuttle={data.amenities.hasAirportShuttle}
+        hasConciergeService={data.amenities.hasConciergeService}
+        hasRoomService={data.amenities.hasRoomService}
+        hasChildFriendly={data.amenities.hasChildFriendly}
+      />
+
+      <Contact
+        name={data.contact_info.name}
+        image={data.contact_info.image}
+        phone={data.contact_info.phone}
+        response_rate={data.contact_info.response_rate}
+        response_time={data.contact_info.response_time}
+        info={data.contact_info.info}
+      />
+
+      <Properties
+        rules={data.additional_properties.house_rules}
+        policy={data.additional_properties.cancellation_policy}
+        transportation={data.additional_properties.local_transportation}
+        languages1={data.additional_properties.host_languages[0]}
+        languages2={data.additional_properties.host_languages[1]}
+        offers={data.additional_properties.special_offers}
+      />
+
+      <Reviews list={data.guestReviews} />
+      <Attractions list={data.nearbyAttractions} />
     </Page>
   );
 }

@@ -1,10 +1,10 @@
-.details {
+.properties {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.details-item{
+.properties-item{
     display: grid;
     gap: 12px;
 }
